@@ -73,6 +73,12 @@ ol{
     list-style-type: none;
 }
 
+.img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Header */
 
 
@@ -80,7 +86,9 @@ ol{
     min-height: 80px;
     display: flex;
     align-items: center;
+    border-bottom: .125rem solid rgba(216, 227, 254, .6);
 }
+
 .header__inner{
     display: flex;
     justify-content: space-between;
@@ -148,10 +156,82 @@ ol{
     background-color: var(--color-light-blue);
 }
 
+/* Hero */
+
+.hero{
+    background: linear-gradient(to bottom, #F4F7FF, #F1F5FF);
+    min-height: 570px;
+}
+
+.hero__inner{
+    background-image: url(../img/hero/clouds.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__content{
+    padding-top: 92px;
+    text-align: center;
+}
+
+.hero__title{
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--color-dark-purple);
+    margin-bottom: 16px;
+}
+
+.hero__subtitle{
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--color-dark-purple);
+    margin-bottom: 28px;
+}
+
+.subtitle__bold{
+    font-weight: 500;
+}
+
+.hero__desc{
+    position: relative;
+    font-family: var(--second-family);
+    font-size: 15px;
+    line-height: 191%;
+    letter-spacing: 0.03em;
+    color: var(--color-grey-purple-alt);
+    margin-bottom: 20px;
+    max-width: 502px;
+    margin-inline: auto;
+}
+
+.hero__desc::after{
+    content: "►";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light-purple);
+    right: 45%;
+    bottom: -67px;
+    width: 52px;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    box-shadow: 0 0 10px #F4F7FF;
+}
+
+.hero__chart{
+   
+}
+
 
 @media (max-width: 900px) {
     .header{
-        padding-top: 20px;
+        padding-block: 20px;
     }
 
     .header__inner{
