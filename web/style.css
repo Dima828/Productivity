@@ -30,7 +30,7 @@
     
     --border-radius: 2px;
 
-    --transition: all .3s ease-in-out;
+    --transition: all .2s ease-in-out;
 }
 
 *{
@@ -73,7 +73,7 @@ ol{
     list-style-type: none;
 }
 
-.img{
+.image{
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -198,7 +198,7 @@ ol{
 .hero__desc{
     position: relative;
     font-family: var(--second-family);
-    font-size: clamp(10px, 1.04vw , 15px);
+    font-size: clamp(8px, 1.04vw , 15px);
     line-height: 191%;
     letter-spacing: 0.03em;
     color: var(--color-grey-purple-alt);
@@ -216,11 +216,10 @@ ol{
     color: var(--color-light-purple);
     right: 45%;
     bottom: -67px;
-    width: 52px;
+    width: clamp(40px, 3.61vw , 52px);
     aspect-ratio: 1;
     border-radius: 30px;
     background-color: var(--color-white);
-    cursor: pointer;
     box-shadow: 0 0 10px #F4F7FF;
 }
 
@@ -236,6 +235,35 @@ ol{
     height: 347px; 
 }
 
+/* Customers */
+
+.customers{
+    padding-block: 58px;
+}
+
+.customers__inner{
+    max-width: 888px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.customers__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 75px;
+}
+
+.customers__link path{
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.customers__link:hover path,
+.customers__link:focus path{
+    fill: #3A79FF;
+}
 @media (max-width: 900px) {
     .header{
         padding-block: 20px;
@@ -259,6 +287,23 @@ ol{
 
     .social__list{
         column-gap: 25px;
+    }
+
+    .hero__content{
+        padding-inline: 15px;
+        padding-top: 50px;
+    }
+
+    .hero__subtitle{
+        margin-bottom: 10px;
+    }
+
+    .hero__subtitle{
+        margin-bottom: 13px;
+    }
+
+    .customers__list{
+        padding-inline: 15px;
     }
 }
 
