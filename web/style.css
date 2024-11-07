@@ -185,7 +185,7 @@ ol{
 }
 
 .hero__subtitle{
-    font-size: 48px;
+    font-size: clamp(22px, 3.33vw, 48px);
     font-weight: 300;
     color: var(--color-dark-purple);
     margin-bottom: 28px;
@@ -198,7 +198,7 @@ ol{
 .hero__desc{
     position: relative;
     font-family: var(--second-family);
-    font-size: 15px;
+    font-size: clamp(10px, 1.04vw , 15px);
     line-height: 191%;
     letter-spacing: 0.03em;
     color: var(--color-grey-purple-alt);
@@ -224,10 +224,17 @@ ol{
     box-shadow: 0 0 10px #F4F7FF;
 }
 
-.hero__chart{
-   
+.chart__block{
+    background-image: url(../img/hero/chart.png);
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 1441px;
+    width: 100%;
+    margin: 0 auto;
+    height: 347px; 
 }
-
 
 @media (max-width: 900px) {
     .header{
