@@ -384,8 +384,19 @@ ol{
 }
 
 .about__item{
+    position: relative;
     width: 140px;
     height: 254px;
+}
+
+.about__item:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: -43px;
+    bottom: 118px;
+    width: 28px;
+    height: 1px;
+    background-color: #dae4fe;
 }
 
 .about__image{
@@ -498,6 +509,16 @@ ol{
     .plan{
         padding-block: 80px;
     }
+
+    .about{
+        padding-inline: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .about__item:not(:last-child)::after{
+        display: none;
+    }
 }
 
 @media (max-width: 675px) {
@@ -522,6 +543,14 @@ ol{
     }
     .plan__desc{
         text-align: center;
+    }
+
+    .about__form{
+        column-gap: 35px;
+    }
+
+    .about__title {
+        margin-bottom: 60px;
     }
 }
 
