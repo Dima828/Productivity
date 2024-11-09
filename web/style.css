@@ -602,6 +602,72 @@ ol{
     padding: 13px 15px;
 }
 
+/* Qoutes */
+
+.qoutes{
+    background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
+    padding-block: 110px;
+}
+
+.qoutes__inner{
+    max-width: 900px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    column-gap: 132px;
+    padding-inline: 15px
+}
+
+.qoutes__content{
+    max-width: 333px;
+}
+
+.qoutes__subtitle{
+    margin-bottom: 31px;
+}
+
+.qoutes__title{
+    font-size: clamp(27px, 2.5vw, 36px);
+    margin-bottom: 14px;
+}
+
+.qoutes__desc{
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 189%;
+    letter-spacing: 0.03em;
+    color: #a4abc8;
+}
+
+.qoutes__message{
+    position: relative;
+    max-width: 423px;
+    background-color: var(--color-white);
+    border: 1px solid #d8e3fe;
+    box-shadow: 0 5px 50px 0 #f3f5fa;
+    padding: 41px 70px;
+}
+
+.qoutes__message::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/avatar.svg);
+    width: 62px;
+    aspect-ratio: 1;
+    bottom: -29px;
+    right: 44%;
+}
+
+.qoutes__message-desc{
+    line-height: 171%;
+    color: #676f95;
+    width: 283px;
+    font-family: var(--second-family);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
 @media (max-width: 900px) {
     .header{
         padding-block: 20px;
@@ -696,6 +762,28 @@ ol{
     .blog__card{
         padding: 50px 26px;
     }
+
+    .qoutes__inner{
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;   
+    }
+    
+    .qoutes{
+        padding-block: 50px;
+    }
+
+    .qoutes__message{
+        max-width: auto;
+        padding: 30px 59px;
+    }
+
+    .qoutes__message::after{
+        bottom: -35px;
+    }
+    
 }
 
 @media (max-width: 675px) {
