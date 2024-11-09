@@ -66,6 +66,7 @@ html{
 
 .subtitle{
     font-family: var(--second-family);
+    text-transform: uppercase;
     font-weight: 500;
     font-size: 10px;
     letter-spacing: 0.1em;
@@ -75,7 +76,7 @@ html{
 .title{
     font-family: var(--font-family);
     font-weight: 500;
-    color: #3d4f9f;
+    color: var(--color-dark-purple);
 }
 
 .desc{
@@ -522,6 +523,85 @@ ol{
     color: var(--color-blue-gradient);
 }
 
+/* Blog */
+
+.blog{
+    background-color: var(--color-light-white);
+    padding-block: 104px;
+}
+
+.blog__inner{
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog__subtitle{
+    margin-bottom: 20px;
+}
+
+.blog__title{
+    margin-bottom: 92px;
+}
+
+.blog__card{
+    background-color: var(--color-white);
+    padding: 64px 40px;
+    border: 1px solid #d8e3fe;
+    box-shadow: 0 15px 50px 0 #eff4ff;
+}
+
+.blog__card-inner{
+    display: flex;
+    column-gap: 67px;
+}
+
+.blocg__card-image{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.blog__image:nth-child(1){
+    grid-column: 2 span;
+    grid-row: 2 span;
+}
+
+.blog__card-content{
+    max-width: 408px;
+}
+
+.blog__card-title{
+    font-size: clamp(27px, 2.5vw , 36px);
+    margin-bottom: 32px;
+}
+
+.blog__card-desc{
+    margin-bottom: 31px;
+}
+
+.blog__card-link{
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.blog__btn{
+    background-color: var(--color-light-blue);
+    color: var(--color-light-purple-alt);
+}
+
+.blog__link{
+    font-size: 13px;
+    font-weight: 700;
+    color: #a6b6da;
+    padding: 13px 15px;
+}
+
 @media (max-width: 900px) {
     .header{
         padding-block: 20px;
@@ -601,6 +681,21 @@ ol{
     .stats__right{
         padding-block: 40px;
     }
+
+    .blog__card-inner{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog__card-link{
+        column-gap: 0;
+        justify-content: center;
+    }
+
+    .blog__card{
+        padding: 50px 26px;
+    }
 }
 
 @media (max-width: 675px) {
@@ -634,6 +729,11 @@ ol{
     .about__title {
         margin-bottom: 60px;
     }
+
+    .blog__link{
+        padding: 10px 12px;
+    }
+    
 }
 
 
