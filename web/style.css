@@ -684,6 +684,10 @@ ol{
     justify-content: center;
 }
 
+#checkbox-list{
+    display: none;
+}
+
 .help__subtitle{
     margin-bottom: 20px;
 }
@@ -714,6 +718,102 @@ ol{
     bottom: 27px;
     width: 18px;
     height: 11px;
+}
+
+/* Started */
+
+.started{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(195deg, #6888ff 0%, #5e80ff 100%);
+    padding-block: 91px;
+}
+
+.started__inner{
+    background-image: url(../img/clouds.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 712px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.started__subtitle{
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.started__title{
+    font-size: clamp(22px, 3.33vw, 48px);
+    color: var(--color-white);
+    margin-bottom: 28px;
+}
+
+.started__desc{
+    color: var(--color-white);
+    margin-bottom: 28px;
+}
+
+.started__form{
+    display: flex;
+    justify-content: center;
+}
+
+.started__view{
+    background-color: var(--color-white);
+    color: var(--color-dark-grey-alt);
+    padding-inline: 17px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.started__read{
+    font-weight: 500;
+    color: #c7d3ff;
+    padding: 13px 9px;
+    border: 1px solid #A0B4FF;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media (max-width: 7000px) {
+    .help__item{
+        width: 100%;
+        transition: var(--transition);
+    }
+
+    .help__item .item__quest{
+        margin-bottom: 16px;
+    }
+
+    .help__item .content p{
+        width: 391px;
+        margin-inline: 56px;
+    }
+
+    #checkbox-list:checked + label .help__item .content{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #checkbox-list:checked + label .help__item{
+        height: 176px;
+    }
+    .content{
+        height: 0;
+    }
+
+    .help__item .content{
+        display: flex;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 900px) {
@@ -769,6 +869,10 @@ ol{
     .help{
         padding-block: 100px;
         padding-inline: 50px 15px;
+    }
+
+    .started__inner{
+        padding-inline: 15px;
     }
 
 }
